@@ -44,10 +44,10 @@ To clone this repository to your computer, use the following code:
 ```
 
 # Creating an Input file
-A single text input file is used to run the kMC simulation. Detailed information and the input files used for the manuscript is shown in the folder named "Input Files".
+A single text input file is used to run the kMC simulation. An example, "InputFile.in" is provided in the repository. Detailed information about the input files is provided in the folder named "Input Files".
 
 # Running the Build file
-Folder "Main Code" already contains the compiled program with all the necessary files embedded into it. To run it on your system, use the following command
+Folder "Program" already contains the compiled program with all the necessary files embedded into it. To run it on your system, use the following command
 ```
 mpirun -np 5 ./KineticMC InputFile OutputFile
 ```
