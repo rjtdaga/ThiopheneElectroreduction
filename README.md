@@ -1,5 +1,5 @@
 # Electrochemical Reaction (methyl-2-thiophene carboxylate reduction)
-This repository is for the relevant files for performing and visualizing kinetic monte carlo simulations (kMC) presented in the paper, "Application of first principles based stochastic simulation of surface kinetics for Arene Electrohydrogenation". While the provided input files run kMC simulations specifically for methyl-2-thiophene carboxylate reduction on a pristine graphene surface, the input files can be appropriately modified to extend it to different surface chemistries on different metals and different facets lying within the scope of the program.
+This repository is for the relevant files for performing and visualizing kinetic monte carlo simulations (kMC) presented in the paper, "Application of first principles based stochastic simulation of surface kinetics for Arene Electrohydrogenation". While the provided input files run kMC simulations specifically for methyl-2-thiophene carboxylate reduction on a pristine graphene surface, the input files can be appropriately modified to extend it to different surface chemistries on different metals and different facets lying within the scope of the program. <newline>
 
 # Software Version used:
 ```
@@ -13,7 +13,10 @@ The schematic flowchart of the accelerated kMC algorithm is shown in the figure 
 
 The step by step outline of the kMC algorithm is as follows:
 1) Generate an initial surface configuration ($\delta$) (t = 0) and initialize the kinetic and interaction parameters.
-2) Check if the oscillation parameter needs to be changed or not. If it is to be changed, update the kinetic parameters.
+2) Check if the oscillation parameter needs to be changed or not. If it is to be changed, update the kinetic parameters. For electrochemical systems with potential loss taken into account, the potential is updated after every kMC step using the following equation
+$V_{ec}=V_{max}*\left(1-exp\left(-\frac{t}{RC}\right)\right)$ <br>
+where $V_{ec}$ is the effective potential at electrode surface after a timestep t, $V_{max}$ is the target potential with respect to the reference potential, R is the resistance of EDL, and C is the capacitance of the EDL. <br>
+Using the updated surface potential, recalculate the activation barrier for every potential-dependent elementary steps.
 3) Equilibrate the surface with the fast elementary steps set by the user using the Donghai approach and update the surface configuration ($\gamma$).
 4) Determine the reaction rate $r_{γβ}$ for all the slow elementary steps taking surface configuration from $\gamma$ to a surface configuration $\beta$ and calculate the total reaction rate as <br>
 $r_{tot(\gamma)}=\sum_{\beta} r_{\gamma\beta}$ 
