@@ -13,7 +13,7 @@ The schematic flowchart of the accelerated kMC algorithm is shown in the figure 
 
 The step by step outline of the kMC algorithm is as follows:
 1) Generate an initial surface configuration ($\delta$) (t = 0) and initialize the kinetic and interaction parameters.
-2) Check if the oscillation parameter needs to be changed or not. If it is to be changed, update the kinetic parameters. For electrochemical systems with potential loss taken into account, the potential is updated after every kMC step using the following equation
+2) Check if the oscillation parameter needs to be changed or not. If it is to be changed, update the kinetic parameters. For electrochemical systems with potential loss taken into account, the potential is updated after every kMC step using the following equation, <br>
 $V_{ec}=V_{max}*\left(1-exp\left(-\frac{t}{RC}\right)\right)$ <br>
 where $V_{ec}$ is the effective potential at electrode surface after a timestep t, $V_{max}$ is the target potential with respect to the reference potential, R is the resistance of EDL, and C is the capacitance of the EDL. <br>
 Using the updated surface potential, recalculate the activation barrier for every potential-dependent elementary steps.
