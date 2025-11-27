@@ -1,5 +1,5 @@
 # Electrochemical Reaction (methyl-2-thiophene carboxylate reduction)
-This repository is for the relevant files for performing and visualizing kinetic monte carlo simulations (kMC) presented in the paper, "Application of first principles based stochastic simulation of surface kinetics for Arene Electrohydrogenation". While the provided input files run kMC simulations specifically for methyl-2-thiophene carboxylate reduction on a pristine graphene surface, the input files can be appropriately modified to extend it to different surface chemistries on different metals and different facets lying within the scope of the program. <newline>
+This repository is for the relevant files for performing and visualizing kinetic monte carlo simulations (kMC) presented in the paper, "Application of first principles based stochastic simulation of surface kinetics for Arene Electrohydrogenation". A preliminary version of the manuscript is provided in the repository named, "Thiophene_Computational_v3.pdf". While the provided input files run kMC simulations specifically for methyl-2-thiophene carboxylate reduction on a pristine graphene surface, the input files can be appropriately modified to extend it to different surface chemistries on different metals and different facets lying within the scope of the program. <newline>
 
 # Software Version used:
 ```
